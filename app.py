@@ -10,6 +10,8 @@ days = [
     {"id": 7, "name": "Sunday"},
 ]
 
+
+
 app = Flask(__name__)
 
 
@@ -30,9 +32,11 @@ def get_day(day_id):
 def post_days():
     return jsonify({"success": True}), 201
 
-@app.route("/<String:nombre>", methods=["GET"])
-def get_nombre(nombre):
-    return nombre
+@app.route("/dia/<int:day_id>", methods=["GET"])
+def dias_faltantes(day_id):
+    return jsonify("hola")
+    
+
 
 
 if __name__ == "__main__":
