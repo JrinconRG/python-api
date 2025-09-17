@@ -32,11 +32,16 @@ def get_day(day_id):
 def post_days():
     return jsonify({"success": True}), 201
 
+
+
 @app.route("/dia/<int:day_id>", methods=["GET"])
 def dias_faltantes(day_id):
     return jsonify("hola")
     
 
+@app.route("/entrega", methods=["POST"])
+def entrega():
+    return jsonify(days[1]["id"]), 201
 
 
 if __name__ == "__main__":
